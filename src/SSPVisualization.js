@@ -20,6 +20,7 @@ const SSPColors = {
 };
 
 const SSPVisualization = () => {
+  const [tauV, setTauV] = useState(1.0);
   const [data, setData] = useState([]);
   const [visibleSSPs, setVisibleSSPs] = useState(Object.keys(SSPColors));
   const [wavelengthRange, setWavelengthRange] = useState([3400, 10000]);
@@ -57,9 +58,22 @@ const SSPVisualization = () => {
     });
   };
 
+  const applyDustAttenuation = (wavelength, luminosity) => {
+    const tau = tauV * Math.pow(wavelength / 5000, -0.7);
+    return luminosity * Math.exp(-tau);
+  };
+
   const filteredData = data.filter(
     d => d.WAVE >= wavelengthRange[0] && d.WAVE <= wavelengthRange[1]
-  );
+  ).map(d => ({
+    ...d,
+    LUM1: applyDustAttenuation(d.WAVE, d.LUM1),
+    LUM10: applyDustAttenuation(d.WAVE, d.LUM10),
+    LUM100: applyDustAttenuation(d.WAVE, d.LUM100),
+    LUM1000: applyDustAttenuation(d.WAVE, d.LUM1000),
+    LUM5000: applyDustAttenuation(d.WAVE, d.LUM5000),
+    LUM10000: applyDustAttenuation(d.WAVE, d.LUM10000),
+  }));
 
   const toggleSSP = (ssp) => {
     setVisibleSSPs(prev => 
@@ -73,6 +87,10 @@ const SSPVisualization = () => {
     setWavelengthRange(newRange);
   };
 
+  const handleTauVChange = (e) => {
+    setTauV(Number(e.target.value));
+  };
+
   const formatXAxis = (tickItem) => {
     return tickItem.toExponential(1);
   };
@@ -80,7 +98,6 @@ const SSPVisualization = () => {
   return (
     <div className="ssp-visualization">
       <h2 className="chart-title">Spectral Energy Distribution (SED) Visualization</h2>
-      {/* Controller Container  */}
       <div className="controls-container">
         <h3>Controls</h3>
         <div className="ssp-toggles">
@@ -129,8 +146,21 @@ const SSPVisualization = () => {
             Show u,g,r,i,z filters
           </label>
         </div>
+        <div className="dust-attenuation">
+          <h4>Dust Attenuation</h4>
+          <label>
+            τ_V:
+            <input
+              type="number"
+              value={tauV}
+              onChange={handleTauVChange}
+              min={0}
+              max={5}
+              step={0.1}
+            />
+          </label>
+        </div>
       </div>
-      {/* Chart Container  */}
       <div className="chart-container">
         <ResponsiveContainer width="100%" height={500}>
           <LineChart
@@ -181,5 +211,4 @@ const SSPVisualization = () => {
     </div>
   );
 };
-
 export default SSPVisualization;

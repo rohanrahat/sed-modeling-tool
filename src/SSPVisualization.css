@@ -22,7 +22,7 @@
     margin-bottom: 20px;
   }
   
-  .ssp-toggles, .wavelength-range, .filter-toggle {
+  .ssp-toggles, .wavelength-range, .filter-toggle, .dust-attenuation {
     flex: 1;
     min-width: 200px;
   }
@@ -39,7 +39,7 @@
     margin-right: 10px;
   }
   
-  .wavelength-range input {
+  .wavelength-range input, .dust-attenuation input {
     width: 80px;
     margin-left: 5px;
   }
