@@ -1,0 +1,56 @@
+.ssp-visualization {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .chart-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .controls-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .ssp-toggles, .wavelength-range, .filter-toggle {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .ssp-toggle-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .ssp-toggle-buttons label {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .wavelength-range input {
+    width: 80px;
+    margin-left: 5px;
+  }
+  
+  .chart-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  h3, h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
