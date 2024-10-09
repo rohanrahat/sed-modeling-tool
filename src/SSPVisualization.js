@@ -10,6 +10,7 @@ const filterWavelengths = [
   { name: 'z', wavelength: 8932, color: 'rgba(255, 0, 255, 0.1)' },
 ];
 
+
 const SSPColors = {
   LUM1: '#e41a1c',
   LUM10: '#377eb8',
@@ -165,7 +166,7 @@ const SSPVisualization = () => {
         <ResponsiveContainer width="100%" height={500}>
           <LineChart
             data={filteredData}
-            margin={{ top: 20, right: 30, left: 60, bottom: 60 }}
+            margin={{ top: 20, right: 30, left: 30, bottom: 30 }}
           >
             <XAxis
               dataKey="WAVE"
@@ -180,7 +181,7 @@ const SSPVisualization = () => {
               scale="log"
               domain={['auto', 'auto']}
               tickFormatter={(value) => value.toExponential(1)}
-              label={{ value: 'Luminosity (L☉/Å)', angle: -90, position: 'insideLeft', offset: -40 }}
+              label={{ value: 'Luminosity (L☉/Å)', angle: -90, position: 'insideLeft', offset: -10, dy: 50, textAnchor: 'middle' }}
             />
             <Tooltip
               formatter={(value, name) => [value.toExponential(4), `${name.replace('LUM', '')} Myr`]}

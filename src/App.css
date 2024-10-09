@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
 .App-logo {
@@ -35,4 +39,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* New styles for SED Modeling Tool */
+.App h1 {
+  color: #333;
+  margin-bottom: 30px;
 }
