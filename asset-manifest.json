@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sed-modeling-tool/static/css/main.6a7c1253.css",
+    "main.js": "/sed-modeling-tool/static/js/main.7c4c4179.js",
+    "static/js/453.0dc169cb.chunk.js": "/sed-modeling-tool/static/js/453.0dc169cb.chunk.js",
+    "index.html": "/sed-modeling-tool/index.html",
+    "main.6a7c1253.css.map": "/sed-modeling-tool/static/css/main.6a7c1253.css.map",
+    "main.7c4c4179.js.map": "/sed-modeling-tool/static/js/main.7c4c4179.js.map",
+    "453.0dc169cb.chunk.js.map": "/sed-modeling-tool/static/js/453.0dc169cb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6a7c1253.css",
+    "static/js/main.7c4c4179.js"
+  ]
+}
