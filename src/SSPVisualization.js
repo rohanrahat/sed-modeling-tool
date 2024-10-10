@@ -100,7 +100,6 @@ const SSPVisualization = () => {
     <div className="ssp-visualization">
       <h2 className="chart-title">Spectral Energy Distribution (SED) Visualization</h2>
       <div className="controls-container">
-        <h3>Controls</h3>
         <div className="ssp-toggles">
           <h4>Toggle SSP Visibility</h4>
           {Object.entries(SSPColors).map(([ssp, color]) => (
@@ -113,6 +112,29 @@ const SSPVisualization = () => {
               {ssp.replace('LUM', '')} Myr
             </label>
           ))}
+        </div>
+        <div className="dust-attenuation">
+          <h4>Dust Attenuation</h4>
+          <label>
+            <input
+              type="number"
+              value={tauV}
+              onChange={handleTauVChange}
+              min={0}
+              max={5}
+              step={0.1}
+            />
+          </label>
+        </div>
+        <div className="filter-toggle">
+        <h4>Togge u,g,r,i,z filters</h4>
+          <label>
+            <input
+              type="checkbox"
+              checked={showFilters}
+              onChange={() => setShowFilters(!showFilters)}
+            />
+          </label>
         </div>
         <div className="wavelength-range">
           <h4>Wavelength Range</h4>
@@ -134,30 +156,6 @@ const SSPVisualization = () => {
               onChange={(e) => handleWavelengthChange(e, 1)}
               min={3400}
               max={10000}
-            />
-          </label>
-        </div>
-        <div className="filter-toggle">
-          <label>
-            <input
-              type="checkbox"
-              checked={showFilters}
-              onChange={() => setShowFilters(!showFilters)}
-            />
-            Show u,g,r,i,z filters
-          </label>
-        </div>
-        <div className="dust-attenuation">
-          <h4>Dust Attenuation</h4>
-          <label>
-            τ_V:
-            <input
-              type="number"
-              value={tauV}
-              onChange={handleTauVChange}
-              min={0}
-              max={5}
-              step={0.1}
             />
           </label>
         </div>

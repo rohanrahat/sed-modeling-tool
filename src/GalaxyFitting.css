@@ -11,14 +11,12 @@
   }
   
   .controls-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    justify-content: space-between;
-    align-items: flex-start;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    background-color: #f0f0f0;
     padding: 20px;
+    border-radius: 8px;
     margin-bottom: 20px;
   }
   
@@ -54,4 +52,22 @@
   
   .recharts-label {
     font-weight: bold;
+  }
+
+  .galaxy-description {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .galaxy-description h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .galaxy-description p {
+    margin-bottom: 10px;
+    line-height: 1.5;
   }
