@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# SED Modeling Tool
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An interactive web-based application for Spectral Energy Distribution (SED) modeling and visualization in astrophysics. This tool allows students and researchers to understand how different stellar populations and dust attenuation affect a galaxy's spectrum.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Visualization of Simple Stellar Population (SSP) models
+- Interactive dust attenuation modeling
+- Galaxy spectrum fitting with multiple SSPs
+- Stellar mass calculation
+- Upload and analyze custom galaxy spectra
 
-### `npm start`
+## Usage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Visit the [SED Modeling Tool](https://rohanrahat.github.io/sed-modeling-tool) (replace with your actual URL)
+2. Use the SSP Visualization section to explore different stellar population models
+3. Adjust dust attenuation parameters to see their effect on spectra
+4. In the Galaxy Spectrum Fitting section, upload a galaxy spectrum or use the default
+5. Adjust model parameters and optimize to fit the observed spectrum
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- React.js
+- Recharts for data visualization
+- Tailwind CSS for styling
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contributing
 
-### `npm run build`
+Contributions to improve the SED Modeling Tool are welcome. Please feel free to submit pull requests or open issues to discuss potential enhancements.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## License
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Acknowledgments
 
-### `npm run eject`
+- Based on concepts from ASTRO 650 - Galactic Structure and Evolution
+- Utilizes stellar population models from [reference as appropriate]
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contact
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For questions or feedback, please contact [Your Name] at [your email].
