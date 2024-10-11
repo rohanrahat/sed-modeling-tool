@@ -98,7 +98,7 @@ const SSPVisualization = () => {
 
   return (
     <div className="ssp-visualization">
-      <h2 className="chart-title">Spectral Energy Distribution (SED) Visualization</h2>
+      <h1 className="chart-title">Single Stellar Population Visualization</h1>
       <div className="controls-container">
         <div className="ssp-toggles">
           <h4>Toggle SSP Visibility</h4>

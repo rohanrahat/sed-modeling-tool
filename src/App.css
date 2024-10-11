@@ -1,11 +1,51 @@
 .App {
   text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+.app-header {
+  background-color: #1a202c;
+  color: white;
+  padding: 1rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.back-link {
+  color: #63b3ed;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.app-main {
+  flex-grow: 1;
+  padding: 2rem;
+}
+
+.app-footer {
+  background-color: #1a202c;
+  color: white;
+  padding: 1rem;
+  font-size: 0.875rem;
+}
+
+/* Existing styles */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -39,10 +79,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-/* New styles for SED Modeling Tool */
-.App h1 {
-  color: #333;
-  margin-bottom: 30px;
 }
