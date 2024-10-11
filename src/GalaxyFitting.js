@@ -36,7 +36,8 @@ const GalaxyFitting = () => {
 
   const fetchObservedData = async () => {
     try {
-      const response = await fetch('/manga_7443-6102.txt');
+    //   const response = await fetch('/manga_7443-6102.txt');
+      const response = await fetch(`${process.env.PUBLIC_URL}/manga_7443-6102.txt`);
       const text = await response.text();
       const parsedData = parseObservedData(text);
       setObservedData(parsedData);
@@ -96,7 +97,7 @@ const GalaxyFitting = () => {
 
   const fetchSSPData = async () => {
     try {
-      const response = await fetch('/bc03_models.txt');
+      const response = await fetch(`${process.env.PUBLIC_URL}/bc03_models.txt`);
       const text = await response.text();
       const parsedData = parseSSPData(text);
       setSSPData(parsedData);

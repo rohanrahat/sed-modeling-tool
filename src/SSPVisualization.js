@@ -3,11 +3,11 @@ import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, ReferenceA
 import './SSPVisualization.css';
 
 const filterWavelengths = [
-  { name: 'u', wavelength: 3551, color: 'rgba(255, 0, 0, 0.1)' },
-  { name: 'g', wavelength: 4686, color: 'rgba(0, 255, 0, 0.1)' },
-  { name: 'r', wavelength: 6166, color: 'rgba(0, 0, 255, 0.1)' },
-  { name: 'i', wavelength: 7480, color: 'rgba(255, 255, 0, 0.1)' },
-  { name: 'z', wavelength: 8932, color: 'rgba(255, 0, 255, 0.1)' },
+  { name: 'u', wavelength: 3551, color: 'rgba(255, 0, 0, 0.5)' },
+  { name: 'g', wavelength: 4686, color: 'rgba(0, 255, 0, 0.5)' },
+  { name: 'r', wavelength: 6166, color: 'rgba(0, 0, 255, 0.5)' },
+  { name: 'i', wavelength: 7480, color: 'rgba(255, 255, 0, 0.5)' },
+  { name: 'z', wavelength: 8932, color: 'rgba(255, 0, 255, 0.5)' },
 ];
 
 
@@ -33,7 +33,7 @@ const SSPVisualization = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('/bc03_models.txt');
+      const response = await fetch(`${process.env.PUBLIC_URL}/bc03_models.txt`);
       const text = await response.text();
       const parsedData = parseData(text);
       setData(parsedData);
